@@ -5,45 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shiftly — Simple Shift Scheduling</title>
   <meta name="description" content="Shiftly is a simple shift scheduling app for managers and their teams. Build the schedule, avoid double-bookings, and let employees see their shifts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/svg+xml" href="logo.svg" />
 </head>
 <body>
 
-  <header class="nav">
+  <header class="nav" id="nav">
     <div class="nav-inner">
       <span class="logo"><img src="logo.svg" alt="Shiftly logo" class="logo-img" />Shiftly</span>
-      <a class="nav-cta" href="#contact">Get in touch</a>
+      <nav class="nav-links">
+        <a class="nav-link" href="#showcase" data-i18n="nav_product">Product</a>
+        <a class="nav-link" href="#features" data-i18n="nav_features">Features</a>
+        <a class="nav-link" href="#enterprise" data-i18n="nav_enterprise">Enterprise</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="de">DE</button>
+        </div>
+        <a class="nav-cta" href="#contact" data-i18n="nav_cta">Get in touch</a>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-inner">
-        <h1>Shift scheduling, without the spreadsheet.</h1>
-        <p class="hero-sub">
+        <span class="eyebrow">✦ <span data-i18n="eyebrow">Simple shift scheduling</span></span>
+        <h1>
+          <span data-i18n="hero_title_line1">Shift scheduling,</span><br />
+          <span class="hero-gradient-text" data-i18n="hero_title_line2">without the spreadsheet.</span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero_sub">
           Shiftly helps managers build the weekly schedule, avoid double-bookings,
           and give every employee a clear view of their own shifts.
         </p>
-        <a class="btn-primary" href="#contact">Get in touch</a>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#contact" data-i18n="hero_cta_primary">Get in touch</a>
+          <a class="btn-secondary" href="#showcase" data-i18n="hero_cta_secondary">See it in action</a>
+        </div>
       </div>
     </section>
 
     <section class="showcase" id="showcase">
       <div class="showcase-inner">
-        <h2>See it in action</h2>
+        <h2 data-i18n="showcase_title">See it in action</h2>
+        <p class="section-sub" data-i18n="showcase_sub">A real look at the tools managers and employees use every day.</p>
         <div class="showcase-grid">
           <figure class="showcase-item">
-            <img src="screenshots/calendar.png" alt="Shiftly weekly calendar view showing shifts across employees" loading="lazy" />
-            <figcaption>Weekly calendar view</figcaption>
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+              </div>
+              <img src="screenshots/calendar.png" alt="Shiftly weekly calendar view showing shifts across employees" loading="lazy" />
+            </div>
+            <figcaption data-i18n="showcase_cap_calendar">Weekly calendar view</figcaption>
           </figure>
           <figure class="showcase-item">
-            <img src="screenshots/shift-offers.png" alt="Shiftly shift offers list with accepted, cancelled, and pending statuses" loading="lazy" />
-            <figcaption>Send and track shift offers</figcaption>
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+              </div>
+              <img src="screenshots/shift-offers.png" alt="Shiftly shift offers list with accepted, cancelled, and pending statuses" loading="lazy" />
+            </div>
+            <figcaption data-i18n="showcase_cap_offers">Send and track shift offers</figcaption>
           </figure>
           <figure class="showcase-item">
-            <img src="screenshots/analytics.png" alt="Shiftly analytics dashboard showing hours worked per employee" loading="lazy" />
-            <figcaption>Employee hours analytics</figcaption>
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+              </div>
+              <img src="screenshots/analytics.png" alt="Shiftly analytics dashboard showing hours worked per employee" loading="lazy" />
+            </div>
+            <figcaption data-i18n="showcase_cap_analytics">Employee hours analytics</figcaption>
           </figure>
         </div>
       </div>
@@ -51,35 +94,80 @@
 
     <section class="features" id="features">
       <div class="features-inner">
-        <h2>What Shiftly does</h2>
+        <h2 data-i18n="features_title">What Shiftly does</h2>
+        <p class="section-sub" data-i18n="features_sub">Everything a manager needs to run the schedule, nothing they don't.</p>
         <div class="feature-grid">
           <div class="feature-card">
-            <h3>Employee list</h3>
-            <p>Keep a simple, up-to-date list of everyone on the team, ready to assign to shifts.</p>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 data-i18n="feature1_title">Employee list</h3>
+            <p data-i18n="feature1_desc">Keep a simple, up-to-date list of everyone on the team, ready to assign to shifts.</p>
           </div>
           <div class="feature-card">
-            <h3>Shift creation</h3>
-            <p>Assign an employee to a date, start time, and end time in a few clicks.</p>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v6M9 17h6"/></svg>
+            </div>
+            <h3 data-i18n="feature2_title">Shift creation</h3>
+            <p data-i18n="feature2_desc">Assign an employee to a date, start time, and end time in a few clicks.</p>
           </div>
           <div class="feature-card">
-            <h3>Calendar view</h3>
-            <p>See the full weekly or monthly schedule across the whole team at a glance.</p>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+            </div>
+            <h3 data-i18n="feature3_title">Calendar view</h3>
+            <p data-i18n="feature3_desc">See the full weekly or monthly schedule across the whole team at a glance.</p>
           </div>
           <div class="feature-card">
-            <h3>Double-booking protection</h3>
-            <p>Shiftly won't let you schedule the same employee for overlapping shifts.</p>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3 data-i18n="feature4_title">Double-booking protection</h3>
+            <p data-i18n="feature4_desc">Shiftly won't let you schedule the same employee for overlapping shifts.</p>
           </div>
           <div class="feature-card">
-            <h3>Employee shift view</h3>
-            <p>Employees can check their own upcoming shifts without calling the manager.</p>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 data-i18n="feature5_title">Employee shift view</h3>
+            <p data-i18n="feature5_desc">Employees can check their own upcoming shifts without calling the manager.</p>
           </div>
           <div class="feature-card">
-            <h3>Shift offers</h3>
-            <p>Send a shift to an employee and track whether it's accepted, cancelled, or still pending.</p>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            </div>
+            <h3 data-i18n="feature6_title">Shift offers</h3>
+            <p data-i18n="feature6_desc">Send a shift to an employee and track whether it's accepted, cancelled, or still pending.</p>
           </div>
           <div class="feature-card">
-            <h3>Analytics</h3>
-            <p>See hours worked per employee at a glance, broken down by month.</p>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="13" y="8" width="3" height="10"/><rect x="19" y="5" width="0" height="13"/></svg>
+            </div>
+            <h3 data-i18n="feature7_title">Analytics</h3>
+            <p data-i18n="feature7_desc">See hours worked per employee at a glance, broken down by month.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="enterprise" id="enterprise">
+      <div class="enterprise-inner">
+        <h2 data-i18n="enterprise_title">Enterprise & identity</h2>
+        <p class="section-sub" data-i18n="enterprise_sub">Connect Shiftly to your organization's identity with Azure Entra ID single sign-on, hosted the way that fits you.</p>
+        <div class="enterprise-grid">
+          <div class="enterprise-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 data-i18n="enterprise1_title">Fully managed</h3>
+            <p data-i18n="enterprise1_desc">We set up and maintain your Azure Entra ID connection inside our Azure tenant. You tell us who needs access — we handle the rest.</p>
+          </div>
+          <div class="enterprise-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m11.5 11.5 8-8M15 9l3 3M18 6l3 3"/></svg>
+            </div>
+            <h3 data-i18n="enterprise2_title">Bring your own tenant</h3>
+            <p data-i18n="enterprise2_desc">Connect Shiftly to your own Azure Entra ID tenant and keep full control over users, permissions, and identity policy on your side.</p>
           </div>
         </div>
       </div>
@@ -87,18 +175,205 @@
 
     <section class="cta" id="contact">
       <div class="cta-inner">
-        <h2>Want to try Shiftly?</h2>
-        <p>Reach out and I'll get you set up.</p>
-        <a class="btn-primary" href="mailto:ulrichroessler@yahoo.com">Contact me</a>
+        <h2 data-i18n="cta_title">Want to try Shiftly?</h2>
+        <p data-i18n="cta_sub">Send a message and I'll get you set up.</p>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <input type="text" name="name" data-i18n-placeholder="name_placeholder" placeholder="Your name" required />
+            <input type="email" name="email" data-i18n-placeholder="email_placeholder" placeholder="Your email" required />
+          </div>
+          <textarea name="message" data-i18n-placeholder="message_placeholder" placeholder="What do you need?" rows="4" required></textarea>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <button type="submit" class="btn-primary" data-i18n="form_submit">Send message</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
+      <span class="footer-logo"><img src="logo.svg" alt="" />Shiftly</span>
       <span>&copy; 2026 Shiftly</span>
     </div>
   </footer>
+
+  <script>
+    const translations = {
+      en: {
+        eyebrow: "Simple shift scheduling",
+        nav_product: "Product",
+        nav_features: "Features",
+        nav_enterprise: "Enterprise",
+        nav_cta: "Get in touch",
+        hero_title_line1: "Shift scheduling,",
+        hero_title_line2: "without the spreadsheet.",
+        hero_sub: "Shiftly helps managers build the weekly schedule, avoid double-bookings, and give every employee a clear view of their own shifts.",
+        hero_cta_primary: "Get in touch",
+        hero_cta_secondary: "See it in action",
+        showcase_title: "See it in action",
+        showcase_sub: "A real look at the tools managers and employees use every day.",
+        showcase_cap_calendar: "Weekly calendar view",
+        showcase_cap_offers: "Send and track shift offers",
+        showcase_cap_analytics: "Employee hours analytics",
+        features_title: "What Shiftly does",
+        features_sub: "Everything a manager needs to run the schedule, nothing they don't.",
+        feature1_title: "Employee list",
+        feature1_desc: "Keep a simple, up-to-date list of everyone on the team, ready to assign to shifts.",
+        feature2_title: "Shift creation",
+        feature2_desc: "Assign an employee to a date, start time, and end time in a few clicks.",
+        feature3_title: "Calendar view",
+        feature3_desc: "See the full weekly or monthly schedule across the whole team at a glance.",
+        feature4_title: "Double-booking protection",
+        feature4_desc: "Shiftly won't let you schedule the same employee for overlapping shifts.",
+        feature5_title: "Employee shift view",
+        feature5_desc: "Employees can check their own upcoming shifts without calling the manager.",
+        feature6_title: "Shift offers",
+        feature6_desc: "Send a shift to an employee and track whether it's accepted, cancelled, or still pending.",
+        feature7_title: "Analytics",
+        feature7_desc: "See hours worked per employee at a glance, broken down by month.",
+        enterprise_title: "Enterprise & identity",
+        enterprise_sub: "Connect Shiftly to your organization's identity with Azure Entra ID single sign-on, hosted the way that fits you.",
+        enterprise1_title: "Fully managed",
+        enterprise1_desc: "We set up and maintain your Azure Entra ID connection inside our Azure tenant. You tell us who needs access — we handle the rest.",
+        enterprise2_title: "Bring your own tenant",
+        enterprise2_desc: "Connect Shiftly to your own Azure Entra ID tenant and keep full control over users, permissions, and identity policy on your side.",
+        cta_title: "Want to try Shiftly?",
+        cta_sub: "Send a message and I'll get you set up.",
+        name_placeholder: "Your name",
+        email_placeholder: "Your email",
+        message_placeholder: "What do you need?",
+        form_submit: "Send message",
+        form_sending: "Sending…",
+        form_thanks: "Thanks! I'll get back to you soon.",
+        form_error: "Something went wrong — please email ulrichroessler@yahoo.com directly.",
+      },
+      de: {
+        eyebrow: "Einfache Schichtplanung",
+        nav_product: "Produkt",
+        nav_features: "Funktionen",
+        nav_enterprise: "Unternehmen",
+        nav_cta: "Kontakt aufnehmen",
+        hero_title_line1: "Schichtplanung,",
+        hero_title_line2: "ohne Excel-Tabelle.",
+        hero_sub: "Shiftly hilft Managern, den Wochenplan zu erstellen, Doppelbuchungen zu vermeiden und jedem Mitarbeitenden einen klaren Überblick über die eigenen Schichten zu geben.",
+        hero_cta_primary: "Kontakt aufnehmen",
+        hero_cta_secondary: "So funktioniert's",
+        showcase_title: "So funktioniert's",
+        showcase_sub: "Ein echter Blick auf die Werkzeuge, die Manager und Mitarbeitende täglich nutzen.",
+        showcase_cap_calendar: "Wochenkalender-Ansicht",
+        showcase_cap_offers: "Schichtangebote senden und verfolgen",
+        showcase_cap_analytics: "Auswertung der Mitarbeiterstunden",
+        features_title: "Was Shiftly kann",
+        features_sub: "Alles, was ein Manager für die Planung braucht, nicht mehr.",
+        feature1_title: "Mitarbeiterliste",
+        feature1_desc: "Eine einfache, aktuelle Liste aller Teammitglieder, bereit für die Schichtzuweisung.",
+        feature2_title: "Schichten erstellen",
+        feature2_desc: "Mitarbeitende in wenigen Klicks einem Datum sowie einer Start- und Endzeit zuweisen.",
+        feature3_title: "Kalenderansicht",
+        feature3_desc: "Den gesamten Wochen- oder Monatsplan für das ganze Team auf einen Blick sehen.",
+        feature4_title: "Schutz vor Doppelbuchung",
+        feature4_desc: "Shiftly verhindert, dass dieselbe Person für sich überschneidende Schichten eingeplant wird.",
+        feature5_title: "Schichtansicht für Mitarbeitende",
+        feature5_desc: "Mitarbeitende sehen ihre eigenen anstehenden Schichten, ohne beim Manager nachzufragen.",
+        feature6_title: "Schichtangebote",
+        feature6_desc: "Eine Schicht an eine Mitarbeiterin oder einen Mitarbeiter senden und den Status verfolgen: angenommen, storniert oder offen.",
+        feature7_title: "Auswertungen",
+        feature7_desc: "Geleistete Stunden pro Mitarbeitendem auf einen Blick, aufgeschlüsselt nach Monat.",
+        enterprise_title: "Unternehmen & Identität",
+        enterprise_sub: "Shiftly per Azure Entra ID Single Sign-on mit der Identität Ihres Unternehmens verbinden — gehostet, wie es zu Ihnen passt.",
+        enterprise1_title: "Vollständig verwaltet",
+        enterprise1_desc: "Wir richten Ihre Azure-Entra-ID-Verbindung in unserem Azure-Tenant ein und pflegen sie. Sie sagen uns, wer Zugriff braucht — wir übernehmen den Rest.",
+        enterprise2_title: "Eigenen Tenant nutzen",
+        enterprise2_desc: "Shiftly mit Ihrem eigenen Azure-Entra-ID-Tenant verbinden und die volle Kontrolle über Benutzer, Berechtigungen und Identitätsrichtlinien behalten.",
+        cta_title: "Shiftly ausprobieren?",
+        cta_sub: "Schreiben Sie eine Nachricht, ich melde mich bei Ihnen.",
+        name_placeholder: "Ihr Name",
+        email_placeholder: "Ihre E-Mail-Adresse",
+        message_placeholder: "Was benötigen Sie?",
+        form_submit: "Nachricht senden",
+        form_sending: "Wird gesendet…",
+        form_thanks: "Danke! Ich melde mich bald bei Ihnen.",
+        form_error: "Etwas ist schiefgelaufen — bitte schreiben Sie direkt an ulrichroessler@yahoo.com.",
+      },
+    };
+
+    let currentLang = localStorage.getItem('shiftly-lang') || (navigator.language.startsWith('de') ? 'de' : 'en');
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      localStorage.setItem('shiftly-lang', lang);
+
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key] !== undefined) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[lang][key] !== undefined) {
+          el.setAttribute('placeholder', translations[lang][key]);
+        }
+      });
+
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      formStatus.textContent = '';
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
+    });
+
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formStatus.textContent = translations[currentLang].form_sending;
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' },
+        });
+        if (response.ok) {
+          formStatus.textContent = translations[currentLang].form_thanks;
+          contactForm.reset();
+        } else {
+          formStatus.textContent = translations[currentLang].form_error;
+        }
+      } catch (err) {
+        formStatus.textContent = translations[currentLang].form_error;
+      }
+    });
+
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 8);
+    }, { passive: true });
+
+    const revealTargets = document.querySelectorAll('.showcase-item, .feature-card');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealTargets.forEach((el) => observer.observe(el));
+    } else {
+      revealTargets.forEach((el) => el.classList.add('in-view'));
+    }
+
+    applyLanguage(currentLang);
+  </script>
 
 </body>
 </html>
