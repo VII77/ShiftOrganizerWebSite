@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>COVER24 — Simple Shift Scheduling, Soon with Alexa</title>
-  <meta name="description" content="Simple shift scheduling for managers and teams: build the schedule, avoid double-bookings, share shifts. Coming soon: ask Alexa who's working." />
+  <title>COVER24 — Einfache Schichtplanung, bald mit Alexa</title>
+  <meta name="description" content="Einfache Schichtplanung für Manager und Teams: Dienstplan erstellen, Doppelbuchungen vermeiden, Schichten teilen. Demnächst: Alexa fragen, wer arbeitet." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/svg+xml" href="cover24-c-tile.svg" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <link rel="canonical" href="https://cover24.app/" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" type="image/svg+xml" href="../cover24-c-tile.svg" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="canonical" href="https://cover24.app/de/" />
   <link rel="alternate" hreflang="en" href="https://cover24.app/" />
   <link rel="alternate" hreflang="de" href="https://cover24.app/de/" />
   <link rel="alternate" hreflang="x-default" href="https://cover24.app/" />
@@ -19,12 +19,12 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="COVER24" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="de_DE" />
-  <meta property="og:url" content="https://cover24.app/" />
-  <meta property="og:title" content="COVER24 — Simple Shift Scheduling, Soon with Alexa" />
-  <meta property="og:description" content="Build the schedule, avoid double-bookings, and let employees see their own shifts. Coming soon: ask Alexa who's working on Saturday." />
-  <meta property="og:image" content="https://cover24.app/og-image.png" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:url" content="https://cover24.app/de/" />
+  <meta property="og:title" content="COVER24 — Einfache Schichtplanung, bald mit Alexa" />
+  <meta property="og:description" content="Dienstplan erstellen, Doppelbuchungen vermeiden und Mitarbeitenden ihre eigenen Schichten zeigen. Demnächst: „Alexa, wer arbeitet am Samstag?“" />
+  <meta property="og:image" content="https://cover24.app/og-image-de.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -44,9 +44,9 @@
       {
         "@type": "WebSite",
         "name": "COVER24",
-        "url": "https://cover24.app/",
-        "inLanguage": "en",
-        "description": "Simple shift scheduling for managers and teams, with an Amazon Alexa integration coming soon to ask about the schedule by voice.",
+        "url": "https://cover24.app/de/",
+        "inLanguage": "de",
+        "description": "Einfache Schichtplanung für Manager und Teams – bald mit Amazon-Alexa-Integration, um den Dienstplan per Sprache abzufragen.",
         "publisher": {
           "@id": "https://cover24.app/#organization"
         }
@@ -60,129 +60,126 @@
   <header class="nav" id="nav">
     <div class="nav-inner">
       <span class="logo">
-        <img src="cover24-c-light.svg" alt="" class="logo-mark" />
-        <img src="cover24-wordmark-light.svg" alt="COVER24 logo" class="logo-img logo-full" />
+        <img src="../cover24-c-light.svg" alt="" class="logo-mark" />
+        <img src="../cover24-wordmark-light.svg" alt="COVER24 logo" class="logo-img logo-full" />
       </span>
       <nav class="nav-links">
-        <a class="nav-link" href="#features">Features</a>
-        <a class="nav-link" href="#enterprise">Enterprise</a>
+        <a class="nav-link" href="#features">Funktionen</a>
+        <a class="nav-link" href="#enterprise">Unternehmen</a>
       </nav>
       <div class="nav-right">
-        <nav class="lang-switch" aria-label="Language">
-          <a class="lang-btn active" aria-current="page" href="./" hreflang="en" lang="en">EN</a>
-          <a class="lang-btn" href="de/" hreflang="de" lang="de">DE</a>
+        <nav class="lang-switch" aria-label="Sprache">
+          <a class="lang-btn" href="../" hreflang="en" lang="en">EN</a>
+          <a class="lang-btn active" aria-current="page" href="./" hreflang="de" lang="de">DE</a>
         </nav>
-        <a class="nav-cta" href="#contact">Get in touch</a>
+        <a class="nav-cta" href="#contact">Kontakt aufnehmen</a>
       </div>
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-controls="side-nav" aria-expanded="false">
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen" aria-controls="side-nav" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </header>
 
   <div class="side-nav-backdrop" id="side-nav-backdrop" hidden></div>
-  <aside class="side-nav" id="side-nav" aria-label="Menu" aria-hidden="true">
+  <aside class="side-nav" id="side-nav" aria-label="Menü" aria-hidden="true">
     <div class="side-nav-header">
       <span class="logo">
-        <img src="cover24-c-light.svg" alt="" class="logo-mark" />
-        <img src="cover24-wordmark-light.svg" alt="COVER24" class="side-nav-logo" />
+        <img src="../cover24-c-light.svg" alt="" class="logo-mark" />
+        <img src="../cover24-wordmark-light.svg" alt="COVER24" class="side-nav-logo" />
       </span>
-      <button type="button" class="menu-close" id="menu-close" aria-label="Close menu">
+      <button type="button" class="menu-close" id="menu-close" aria-label="Menü schließen">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
     <nav class="side-nav-links">
-      <a class="side-nav-link" href="#features">Features</a>
-      <a class="side-nav-link" href="#enterprise">Enterprise</a>
+      <a class="side-nav-link" href="#features">Funktionen</a>
+      <a class="side-nav-link" href="#enterprise">Unternehmen</a>
     </nav>
     <div class="side-nav-footer">
-      <nav class="lang-switch" aria-label="Language">
-        <a class="lang-btn active" aria-current="page" href="./" hreflang="en" lang="en">EN</a>
-        <a class="lang-btn" href="de/" hreflang="de" lang="de">DE</a>
+      <nav class="lang-switch" aria-label="Sprache">
+        <a class="lang-btn" href="../" hreflang="en" lang="en">EN</a>
+        <a class="lang-btn active" aria-current="page" href="./" hreflang="de" lang="de">DE</a>
       </nav>
-      <a class="nav-cta side-nav-cta" href="#contact">Get in touch</a>
+      <a class="nav-cta side-nav-cta" href="#contact">Kontakt aufnehmen</a>
     </div>
   </aside>
 
   <main>
     <section class="hero">
       <div class="hero-inner">
-        <span class="eyebrow">✦ <span>Coming soon: Alexa integration</span></span>
+        <span class="eyebrow">✦ <span>Demnächst: Alexa-Integration</span></span>
         <h1>
-          <span>"Alexa, who's working</span><br />
-          <span class="hero-gradient-text">on Saturday?"</span>
+          <span>„Alexa, wer arbeitet</span><br />
+          <span class="hero-gradient-text">am Samstag?“</span>
         </h1>
-        <p class="hero-sub">
-          COVER24 is getting a voice. Soon you'll be able to ask Alexa about your
-          team's schedule — no app, no spreadsheet, just ask.
-        </p>
+        <p class="hero-sub">COVER24 bekommt eine Stimme. Bald können Sie Alexa einfach nach dem Dienstplan Ihres Teams fragen – ohne App, ohne Tabelle.</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="#contact">Get in touch</a>
+          <a class="btn-primary" href="#contact">Kontakt aufnehmen</a>
         </div>
       </div>
     </section>
 
     <section class="features" id="features">
       <div class="features-inner">
-        <h2>What COVER24 does</h2>
-        <p class="section-sub">Everything a manager needs to run the schedule, nothing they don't.</p>
+        <h2>Was COVER24 kann</h2>
+        <p class="section-sub">Alles, was ein Manager für die Planung braucht, nicht mehr.</p>
         <div class="feature-grid">
           <div class="feature-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
-            <h3>Employee list</h3>
-            <p>Keep a simple, up-to-date list of everyone on the team, ready to assign to shifts.</p>
+            <h3>Mitarbeiterliste</h3>
+            <p>Eine einfache, aktuelle Liste aller Teammitglieder, bereit für die Schichtzuweisung.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v6M9 17h6"/></svg>
             </div>
-            <h3>Shift creation</h3>
-            <p>Assign an employee to a date, start time, and end time in a few clicks.</p>
+            <h3>Schichten erstellen</h3>
+            <p>Mitarbeitende in wenigen Klicks einem Datum sowie einer Start- und Endzeit zuweisen.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
             </div>
-            <h3>Calendar view</h3>
-            <p>See the full weekly or monthly schedule across the whole team at a glance.</p>
+            <h3>Kalenderansicht</h3>
+            <p>Den gesamten Wochen- oder Monatsplan für das ganze Team auf einen Blick sehen.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
             </div>
-            <h3>Double-booking protection</h3>
-            <p>COVER24 won't let you schedule the same employee for overlapping shifts.</p>
+            <h3>Schutz vor Doppelbuchung</h3>
+            <p>COVER24 verhindert, dass dieselbe Person für sich überschneidende Schichten eingeplant wird.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
             </div>
-            <h3>Employee shift view</h3>
-            <p>Employees can check their own upcoming shifts without calling the manager.</p>
+            <h3>Schichtansicht für Mitarbeitende</h3>
+            <p>Mitarbeitende sehen ihre eigenen anstehenden Schichten, ohne beim Manager nachzufragen.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
             </div>
-            <h3>Shift offers</h3>
-            <p>Send a shift to an employee and track whether it is accepted, cancelled, or still pending.</p>
+            <h3>Schichtangebote</h3>
+            <p>Eine Schicht an eine Mitarbeiterin oder einen Mitarbeiter senden und den Status verfolgen: angenommen, storniert oder offen.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="13" y="8" width="3" height="10"/><rect x="19" y="5" width="0" height="13"/></svg>
             </div>
-            <h3>Analytics</h3>
-            <p>See hours worked per employee at a glance, broken down by month.</p>
+            <h3>Auswertungen</h3>
+            <p>Geleistete Stunden pro Mitarbeitendem auf einen Blick, aufgeschlüsselt nach Monat.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>
             </div>
-            <span class="feature-tag">Coming soon</span>
-            <h3>Alexa integration</h3>
-            <p>Ask Alexa about the schedule: "Who's working Saturday?" or "When is Anna's next shift?"</p>
+            <span class="feature-tag">Demnächst</span>
+            <h3>Alexa-Integration</h3>
+            <p>Fragen Sie Alexa nach dem Dienstplan: „Wer arbeitet am Samstag?“ oder „Wann ist Annas nächste Schicht?“</p>
           </div>
         </div>
       </div>
@@ -190,22 +187,22 @@
 
     <section class="enterprise" id="enterprise">
       <div class="enterprise-inner">
-        <h2>Enterprise & identity</h2>
-        <p class="section-sub">Connect COVER24 to your organization's identity with Azure Entra ID single sign-on, hosted the way that fits you.</p>
+        <h2>Unternehmen & Identität</h2>
+        <p class="section-sub">COVER24 per Azure Entra ID Single Sign-on mit der Identität Ihres Unternehmens verbinden — gehostet, wie es zu Ihnen passt.</p>
         <div class="enterprise-grid">
           <div class="enterprise-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             </div>
-            <h3>Fully managed</h3>
-            <p>We set up and maintain your Azure Entra ID connection inside our Azure tenant. You tell us who needs access — we handle the rest.</p>
+            <h3>Vollständig verwaltet</h3>
+            <p>Wir richten Ihre Azure-Entra-ID-Verbindung in unserem Azure-Tenant ein und pflegen sie. Sie sagen uns, wer Zugriff braucht — wir übernehmen den Rest.</p>
           </div>
           <div class="enterprise-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m11.5 11.5 8-8M15 9l3 3M18 6l3 3"/></svg>
             </div>
-            <h3>Bring your own tenant</h3>
-            <p>Connect COVER24 to your own Azure Entra ID tenant and keep full control over users, permissions, and identity policy on your side.</p>
+            <h3>Eigenen Tenant nutzen</h3>
+            <p>COVER24 mit Ihrem eigenen Azure-Entra-ID-Tenant verbinden und die volle Kontrolle über Benutzer, Berechtigungen und Identitätsrichtlinien behalten.</p>
           </div>
         </div>
       </div>
@@ -213,16 +210,16 @@
 
     <section class="cta" id="contact">
       <div class="cta-inner">
-        <h2>Want to try COVER24?</h2>
-        <p>Send a message and I'll get you set up.</p>
+        <h2>COVER24 ausprobieren?</h2>
+        <p>Schreiben Sie eine Nachricht, ich melde mich bei Ihnen.</p>
         <form class="contact-form" id="contact-form" action="https://formspree.io/f/xeaopnll" method="POST">
           <div class="form-row">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="email" name="email" placeholder="Your email" required />
+            <input type="text" name="name" placeholder="Ihr Name" required />
+            <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required />
           </div>
-          <textarea name="message" placeholder="What do you need?" rows="4" required></textarea>
+          <textarea name="message" placeholder="Was benötigen Sie?" rows="4" required></textarea>
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-          <button type="submit" class="btn-primary">Send message</button>
+          <button type="submit" class="btn-primary">Nachricht senden</button>
           <p class="form-status" id="form-status" role="status"></p>
         </form>
       </div>
@@ -231,12 +228,12 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <span class="footer-logo"><img src="cover24-c-dark.svg" alt="" class="logo-mark" /><img src="cover24-wordmark.svg" alt="COVER24" /></span>
+      <span class="footer-logo"><img src="../cover24-c-dark.svg" alt="" class="logo-mark" /><img src="../cover24-wordmark.svg" alt="COVER24" /></span>
       <span>&copy; 2026 COVER24</span>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 
 </body>
 </html>
