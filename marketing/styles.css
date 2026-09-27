@@ -1,3 +1,37 @@
+/* Fonts (self-hosted, SIL Open Font License — see fonts/OFL.txt) */
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/space-grotesk-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/space-grotesk-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/space-grotesk-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/space-grotesk-latin-700-normal.woff2") format("woff2");
+}
+
 :root {
   --bg: #fdfdfd;
   --bg-alt: #f3f4f6;
@@ -592,6 +626,69 @@ section h2 {
     transform: none;
     transition: none;
   }
+}
+
+/* Footer links */
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+/* Legal pages */
+
+a.logo {
+  text-decoration: none;
+}
+
+.legal {
+  padding: 64px 24px 96px;
+}
+
+.legal-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+.legal h1 {
+  font-size: 2.25rem;
+  margin: 0 0 8px;
+}
+
+.legal h2 {
+  font-size: 1.15rem;
+  margin: 36px 0 8px;
+}
+
+.legal p {
+  margin: 0 0 12px;
+}
+
+.legal a {
+  color: var(--text);
+}
+
+.legal-note {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+mark.todo {
+  background: #fde68a;
+  color: #2b3644;
+  padding: 0 4px;
+  border-radius: 3px;
 }
 
 /* Dark mode adjustments */
