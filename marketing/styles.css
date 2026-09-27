@@ -594,6 +594,28 @@ section h2 {
   }
 }
 
+/* Dark mode adjustments */
+
+@media (prefers-color-scheme: dark) {
+  .btn-primary {
+    background: #fdfdfd;
+    color: #2b3644;
+  }
+
+  .btn-primary:hover {
+    background: #e3e5e8;
+  }
+
+  .feature-icon {
+    background: #4e555e;
+  }
+
+  .cta-inner {
+    background: linear-gradient(135deg, #2b3644, #3a4553);
+    border: 1px solid var(--border);
+  }
+}
+
 /* Side nav (small screens) */
 
 .menu-toggle,
