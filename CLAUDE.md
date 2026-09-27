@@ -1,4 +1,4 @@
-# Project: Shiftly — Shift Scheduling App
+# Project: Cover24 — Shift Scheduling App
 
 ## What this app does
 A manager assigns employees to shifts (date + time slot + role/location).
