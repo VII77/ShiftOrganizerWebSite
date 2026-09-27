@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cover24.app/sitemap.xml
